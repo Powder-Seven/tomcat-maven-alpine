@@ -1,4 +1,4 @@
-FROM openjdk:7-alpine
+FROM openjdk:8-alpine
 MAINTAINER Daeyoun Kang <mail.ikasty@gmail.com>
 
 # predefine values
