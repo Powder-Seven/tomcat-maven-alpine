@@ -1,4 +1,4 @@
-FROM tomcat:7-alpine
+FROM tomcat:7-jre7-alpine
 MAINTAINER Daeyoun Kang <mail.ikasty@gmail.com>
 
 # predefine values
