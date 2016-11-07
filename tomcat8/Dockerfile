@@ -32,6 +32,7 @@ RUN apk add --update --no-cache --virtual .build curl && \
 
 # copy script
 COPY ./start.sh /usr/local/tomcat/bin/start.sh
+RUN chmod +x /usr/local/tomcat/bin/start.sh
 WORKDIR /usr/local/tomcat
 
 CMD start.sh
