@@ -3,15 +3,18 @@ MAINTAINER Daeyoun Kang <mail.ikasty@gmail.com>
 
 # predefine values
 ENV MAVEN_VERSION=3.3.9 \
-	TOMCAT_MAJOR=8 \
-	TOMCAT_VERSION=8.5.6 \
-	TOMCAT_HOME=/usr/local/tomcat \
-	M2_HOME=/usr/lib/mvn \
-	M2=$M2_HOME/bin \
+	TOMCAT_MAJOR=7 \
+	TOMCAT_VERSION=7.0.72
+
+ENV TOMCAT_HOME=/usr/local/tomcat \
+	M2_HOME=/usr/lib/mvn
+
+ENV M2=$M2_HOME/bin \
 	CATALINA_BASE=/usr/local/tomcat \
 	CATALINA_HOME=/usr/local/tomcat \
-	CATALINA_TMPDIR=/usr/local/tomcat/temp \
-	PATH=$PATH:$M2_HOME:$M2:/usr/local/tomcat/bin
+	CATALINA_TMPDIR=/usr/local/tomcat/temp
+
+ENV PATH=$PATH:$M2_HOME:$M2:$CATALINA_HOME/bin
 
 # install maven
 RUN wget http://mirror.navercorp.com/apache/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz && \
